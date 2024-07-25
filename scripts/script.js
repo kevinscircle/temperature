@@ -17,9 +17,13 @@ if (operation == "1") {
   console.log("subtraction", subtraction);
   document.write(num1 + " - " + num2 + " = " + subtraction);
 } else if (operation == "3") {
-  var division = Number(num1) / Number(num2);
-  console.log("division", division);
-  document.write(num1 + " / " + num2 + " = " + division);
+  if (num2 === 0 || num2 === "0") {
+    document.write("You can't divide by zero");
+  } else {
+    var division = Number(num1) / Number(num2);
+    console.log("division", division);
+    document.write(num1 + " / " + num2 + " = " + division);
+  }
 } else if (operation == "4") {
   var multiplication = Number(num1) * Number(num2);
   document.write(num1 + " * " + num2 + " = " + multiplication);
