@@ -49,8 +49,15 @@ button {
     border-radius: 15px;
     text-align: center;
     color: rgb(174, 27, 174);
-    
-   line-height: 2;
+    line-height: 2;
+}
+
+#choice {
+    background-color: rgb(174, 27, 174);
+    border-radius: 15px;
+    text-align: center;
+    color: rgb(18, 187, 187);
+    line-height: 2;
 }
 
 .btn-txt {
@@ -99,14 +106,15 @@ button:hover {
     align-items: center;
     justify-content: space-evenly;
     width: 1500px;
+    border: 3px solid black;
 }
 
 .img-flex img {
-    height: 400px;
+    height: 100px;
 
-    width: 300px;
+    width: 100px;
     border-radius: 50%;
-    border: 3px solid black;
+
     /* background-size: auto; */
     margin-bottom: 5%;
     margin-top: 5%;
@@ -114,14 +122,18 @@ button:hover {
 }
 
 .main-flex h1 {
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     font-size: 50px;
 }
+.main-flex h2 {
+    margin-bottom: 2%;
+    font-size: 30px;
+}
 
-.btn-flex{
+.btn-flex {
     display: flex;
     flex-direction: row;
-  
+
     width: 700px;
     margin-bottom: 10%;
 }
