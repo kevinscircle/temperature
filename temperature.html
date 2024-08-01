@@ -7,34 +7,49 @@
     <title>Temperature Conversion</title>
   </head>
   <body>
-    <main class="main-flex">
-      <div class="img-flex">
-        <div class="">
-          <img src="./img/64eacd7c2d6bc5ca1c378df03194b7e4.jpg" alt="" />
+    <main class="container-flex">
+      <div class="main-flex card">
+        <div class="img-flex">
+          <div class="">
+            <img src="./img/64eacd7c2d6bc5ca1c378df03194b7e4.jpg" alt="" />
+          </div>
+          <div>
+            <img src="./img/fd58d36e11cd933916a77e57ce9f372f.jpg" alt="" />
+          </div>
+          <div>
+            <img src="./img/67ca675e528ecbd14ef05dd2782b5601.jpg" alt="" />
+          </div>
+          <div>
+            <img src="./img/21cc7c8824adbb7fabb9ba1f5e96ae56.jpg" alt="" />
+          </div>
         </div>
-        <div>
-          <img src="./img/fd58d36e11cd933916a77e57ce9f372f.jpg" alt="" />
-        </div>
-        <div>
-          <img src="./img/67ca675e528ecbd14ef05dd2782b5601.jpg" alt="" />
-        </div>
-        <div>
-          <img src="./img/21cc7c8824adbb7fabb9ba1f5e96ae56.jpg" alt="" />
+        <h1>Convert Celsius to Fahrenheit</h1>
+        <div class="btn-flex">
+          <button class="type1 btn-txt" onclick="temp();">
+            Convert Celsius to Fahrenheit
+          </button>
+          <div id="conversion"></div>
         </div>
       </div>
-      <h1>Convert Celsius to Fahrenheit</h1>
-      <div class="btn-flex">
-        <button class="type1 btn-txt" onclick="temp();">
-          Convert Celsius to Fahrenheit
-        </button>
-        <div id="conversion"></div>
+
+      <div class="main-flex card">
+        <h2>Convert a temperature between Celsius and Fahrenheit</h2>
+        <div class="btn-flex">
+          <button class="type1 btn-txt" onclick="convertTemperature();">
+            Convert between Celsius and Fahrenheit
+          </button>
+          <div id="choice"></div>
+        </div>
       </div>
-      <h2>Convert a temperature between Celsius and Fahrenheit</h2>
-      <div class="btn-flex">
-        <button class="type1 btn-txt" onclick="convertTemperature();">
-          Convert between Celsius and Fahrenheit
-        </button>
-        <div id="choice"></div>
+
+      <div class="main-flex card">
+        <h2>Convert a temperature range between Celsius and Fahrenheit</h2>
+        <div class="btn-flex">
+          <button class="type1 btn-txt" onclick="convertTemperatureRange();">
+            Convert between Celsius and Fahrenheit range
+          </button>
+          <div id="range"></div>
+        </div>
       </div>
     </main>
 

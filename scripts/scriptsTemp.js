@@ -14,14 +14,43 @@ function convertTemperature() {
   console.log("scale", up);
 
   if (up == "C") {
-    let fahrenheit = temperature * (9 / 5) + 32;
-    return (document.getElementById("choice").innerHTML += `
-        <p>The conversion of Celsius ${temperature}&deg to Fahrenheit is ${fahrenheit}&deg</p>`);
-  } else if (up == "F") {
     let celsius = (temperature - 32) * (5 / 9);
     return (document.getElementById("choice").innerHTML += `
-        <p>The conversion of Celsius ${temperature}&deg to Fahrenheit is ${celsius}&deg</p>`);
+        <p>The conversion of Fahrenheit ${temperature}&deg to Celsius is ${celsius}&deg</p>`);
+  } else if (up == "F") {
+    let fahrenheit = temperature * (9 / 5) + 32;
+
+    return (document.getElementById("choice").innerHTML += `
+        <p>The conversion of Celsius ${temperature}&deg to Fahrenheit is ${fahrenheit}&deg</p>`);
   } else {
     alert("Invalid input");
+  }
+}
+
+function convertTemperatureRange() {
+  //startValue, endValue, string
+  let startValue = Number(prompt("Enter starting temperature range number"));
+  let endValue = Number(prompt("Enter ending temperature range number"));
+  let string = prompt("Enter C for Celsius or F for Fahrenheit");
+  let up = string.toUpperCase();
+
+  for (let i = startValue; i <= endValue; i++) {
+    let temperature = i;
+    console.log("temperature", temperature);
+
+    if (up === "C") {
+      let celsius = (temperature - 32) * (5 / 9);
+      console.log("celsius", celsius);
+      document.getElementById("range").innerHTML += `
+        <p>The conversion of Fahrenheit ${temperature}&deg to Celsius is ${celsius}&deg</p>`;
+    } else if (up === "F") {
+      let fahrenheit = temperature * (9 / 5) + 32;
+      console.log("fahrenheit", fahrenheit);
+
+      document.getElementById("range").innerHTML += `
+      <p>The conversion of Celsius ${temperature}&deg to Fahrenheit is ${fahrenheit}&deg</p>`;
+    } else {
+      alert("error");
+    }
   }
 }
